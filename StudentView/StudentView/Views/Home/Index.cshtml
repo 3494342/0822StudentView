@@ -1,0 +1,19 @@
+﻿@using System.Drawing
+
+@{
+    ViewBag.Title = "Index";
+    string[] colors = {"red", "green", "blue", "white", "black"};
+    List<SelectListItem> lstdays = new List<SelectListItem>()
+    {
+        new SelectListItem() {Text = "Sunday", Value = "1"},
+        new SelectListItem() {Text = "Monday", Value = "2"},
+        new SelectListItem() {Text = "Tuesday", Value = "3"},
+        new SelectListItem() {Text = "Wednesday", Value = "4"},
+        new SelectListItem() {Text = "Thursday", Value = "5"},
+        new SelectListItem() {Text = "Friday", Value = "6"}
+    };
+}
+
+<h2>Index</h2>
+
+@Html.DropDownList("color", new SelectList(new string[] { "red", "green", "blue" }), "Select Color", new { @class = "form-control" })
