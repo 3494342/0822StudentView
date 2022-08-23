@@ -10,6 +10,7 @@ namespace StudentView.Controllers
     public class AccountController : Controller
     {
         // GET: Account
+        [Route("StandardHelper")]
         public ActionResult Login()
         {
             return View();
@@ -19,7 +20,7 @@ namespace StudentView.Controllers
         {
             return View();
         }
-
+        [Route("StrongHelper")]
         public ViewResult Register()
         {
             List<City> lstCityList = new List<City>()
@@ -30,7 +31,19 @@ namespace StudentView.Controllers
 
             };
             ViewBag.CityList = lstCityList;
-            return View();
+            RegisterViewModel model = new RegisterViewModel()
+            {
+                Name = "CHEN",
+                Email = "CHEN@qq.com",
+                Password = "test",
+                Gender = "M",
+                CityId = "2",
+                Languages = new string[] {"englist", "chinese"},
+                IsAgree = "yes",
+                userStatus = RegisterViewModel.UserStatus.Active
+            };
+
+            return View(model);
         }
         [HttpPost]//需要加载的
         public ViewResult Register(RegisterViewModel model)

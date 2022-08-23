@@ -1,4 +1,5 @@
-﻿@model StudentView.Models.RegisterViewModel
+﻿@using StudentView.MyExtension
+@model StudentView.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
 }
@@ -42,11 +43,13 @@
     </div>
     <div class="form-group">
         <div class="checkbox">
-            @Html.CheckBoxFor(m => m.IsAgree)I agree terms and condition
+            @*@Html.CheckBoxFor(m => m.IsAgree)I agree terms and condition*@
+            @Html.MyCheckBoxFor(m => m.IsAgree,"yes")I agree terms and condition
         </div>
     </div>
     <div class="form-group">
-        <input type="submit" value="Register" class="btn btn-default" />
+        @*<input type="submit" value="Register" class="btn btn-default" />*@
+        @Html.Submit("Register","btn btn-default")
     </div>
 }
 

@@ -10,6 +10,7 @@ namespace StudentView.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        [Route("DropdownHelper")]
         public ViewResult Index()
         {
             return View();

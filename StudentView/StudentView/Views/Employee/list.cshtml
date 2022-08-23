@@ -1,0 +1,27 @@
+﻿@using StudentView.Models
+@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "list";
+}
+
+<h2>list</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Salary[DisplayFor]</th>
+    </tr>
+    </thead>
+    @foreach (Employee e in Model)
+    {
+        <tr>
+            <td>@e.EmployeeId</td>
+            <td>@e.Name</td>
+            <td>@e.salary</td>
+            <td>@Html.DisplayFor(m=>e.salary)</td>
+        </tr>
+    }
+</table>
+

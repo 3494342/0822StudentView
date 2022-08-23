@@ -1,0 +1,15 @@
+﻿@using StudentView.MyExtension
+@model StudentView.Models.Employee
+@{
+    ViewBag.Title = "New";
+}   
+
+<h2>New</h2>
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <div class="form-group">
+        @Html.Submit("submit", "btn btn-default")
+    </div>
+   
+}

@@ -12,8 +12,8 @@ namespace StudentView.Models
         public string Password { get; set; }
         public string Gender { get; set; }
         public string CityId { get; set; }
-        public string Languages { get; set; }
-        public bool IsAgree { get; set; }
+        public string[] Languages { get; set; }
+        public string IsAgree { get; set; }
         public UserStatus userStatus { get; set; }
         public enum UserStatus
         {

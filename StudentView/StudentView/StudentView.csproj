@@ -137,6 +137,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
@@ -144,9 +145,12 @@
     </Compile>
     <Compile Include="Models\Assessment.cs" />
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\MarkSheet.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="MyExtension\MyHelpers.cs" />
+    <Compile Include="MyExtension\MyString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +169,10 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\City.cshtml" />
+    <Content Include="Views\Employee\Add.cshtml" />
+    <Content Include="Views\Employee\list.cshtml" />
+    <Content Include="Views\Employee\New.cshtml" />
+    <Content Include="Views\Employee\Display.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

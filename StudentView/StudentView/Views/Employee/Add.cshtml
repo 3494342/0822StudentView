@@ -1,0 +1,30 @@
+﻿@model StudentView.Models.Employee
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add Employee</h2>
+<hr/>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.EmployeeId)<br/>
+    @Html.EditorFor(m => m.EmployeeId)<br/>
+
+    @Html.LabelFor(m => m.Address)<br />
+    @Html.EditorFor(m => m.Address)<br/>
+
+    @Html.LabelFor(m => m.Name)<br />
+    @Html.EditorFor(m => m.Name)<br/>
+
+    @Html.LabelFor(m => m.Password)<br />
+    @Html.EditorFor(m => m.Password)<br/>
+    <div class="form-group">
+        <div class="checkbox">
+            @Html.CheckBox("remember", "remember")
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Register" class="btn btn-default" />
+    </div>
+
+}
