@@ -17,3 +17,8 @@
 <h2>Index</h2>
 
 @Html.DropDownList("color", new SelectList(new string[] { "red", "green", "blue" }), "Select Color", new { @class = "form-control" })
+<br/>
+@Html.DropDownList("day", new SelectList(lstdays,"Value","Text"), "Select Color", new { @class = "form-control" })
+<br />
+@Html.ListBox("City", new MultiSelectList(colors),new {@class = "form-control"})
+

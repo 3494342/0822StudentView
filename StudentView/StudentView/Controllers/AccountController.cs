@@ -22,6 +22,14 @@ namespace StudentView.Controllers
 
         public ViewResult Register()
         {
+            List<City> lstCityList = new List<City>()
+            {
+                new City() {Id = 1, Name = "Delhi"},
+                new City() {Id = 2, Name = "Mumbai"},
+                new City() {Id = 3, Name = "Shenzhen"}
+
+            };
+            ViewBag.CityList = lstCityList;
             return View();
         }
         [HttpPost]//需要加载的

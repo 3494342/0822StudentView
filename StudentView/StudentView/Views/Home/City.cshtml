@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "City";
+}
+
+<h2>City</h2>
+@Html.DropDownList("city", new SelectList(ViewBag.CityList, "Id", "Name"), "SelectCity", new { @class = "form-control" })
+
+<br />
+@Html.ListBox("lstCityList", new SelectList(ViewBag.CityList, "Id", "Name"), new { @class = "form-control" })
