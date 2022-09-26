@@ -13,12 +13,12 @@ namespace StudentView
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             
-            routes.MapMvcAttributeRoutes();
-            routes.MapRoute(
-                name: "route_signin",
-                url: "Signin",
-                defaults: new {Controller = "Account", action = "Login"})
-                ;
+            //routes.MapMvcAttributeRoutes();
+            //routes.MapRoute(
+            //    name: "route_signin",
+            //    url: "Signin",
+            //    defaults: new {Controller = "Account", action = "Login"})
+            //    ;
 
             routes.MapRoute(
                 name: "Default",

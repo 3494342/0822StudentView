@@ -50,5 +50,21 @@ namespace StudentView.Controllers
         {
             return View();
         }
+
+        public JsonResult ChkDuplicate(string teacherName)//没有在teacher控制器中？
+        {
+            string[] teachers = { "chen", "ao" };
+            if (teachers.Contains(teacherName))
+            {
+                return Json(false, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(true, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+
+
     }
 }

@@ -1,0 +1,59 @@
+﻿@using StudentView.Models
+@model Teacher
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (@Html.BeginForm())
+{
+    <div>
+        @Html.ValidationSummary(true,"Error")
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
+        @Html.ValidationMessage("Name")
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age, new {@class = "form-control"})
+        @Html.ValidationMessage("Age")
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Tele)
+        @Html.TextBoxFor(m => m.Tele, new { @class = "form-control" })
+        @Html.ValidationMessage("Tele")
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Time)
+        @Html.TextBoxFor(m => m.Time, new {@class = "form-control"})
+        @Html.ValidationMessage("Time")
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.valid)
+        @Html.CheckBoxFor(m => m.valid, new { @class = "form-control" })
+        @Html.ValidationMessage("valid")
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-default" />
+    </div>
+
+
+}
+@*@section validation{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}*@
+<script src="~/scripts/jquery.validate.js"></script>
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+    $.validator.unobtrusive.adapters.addBool("chkreq");
+    $.validator.addMethod("chkreq", function(value, element, param) {
+        var flag = $(element).prop('checked');//return true or false
+        return flag;
+    });
+</script>
